@@ -1,0 +1,14 @@
+# Archivo: .github/workflows/05-efilters.yaml
+name: "05 - Event Filters"
+
+on:
+  push:
+    branches:
+      - features  # Se activa solo en cambios en la rama 'features'
+
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Message
+        run: echo "Running whenever branch is features"
