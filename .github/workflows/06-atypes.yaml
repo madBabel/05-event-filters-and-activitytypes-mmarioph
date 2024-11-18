@@ -1,0 +1,17 @@
+# Archivo: .github/workflows/06-activity-types.yaml
+name: "06 - Activity Types"
+
+on:
+  pull_request:
+    types:
+      - opened          # Se activa al abrir un Pull Request
+      - synchronize     # Se activa al sincronizar un Pull Request
+    branches:
+      - develop         # Aplica solo si la rama base es 'develop'
+
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Message
+        run: echo "Running whenever a PR is opened or synchronized AND base branch is develop"
